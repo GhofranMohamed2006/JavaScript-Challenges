@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Challenge 18</title>
+    <style>
+        .card {
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+        .selected {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div id="products"></div>
+    <div id="message"></div>
+    <script>
+        let products = [
+            { name: "Laptop", price: 25000 },
+            { name: "Phone", price: 15000 },
+            { name: "Tablet", price: 8000 }
+        ];
+        let myProducts = document.getElementById("products");
+        let message = document.getElementById("message");
+        for (let i=0; i<products.length; i++) {
+            let myDiv = document.createElement("div");
+            myDiv.classList.add("card");
+            let title = document.createElement("h2");
+            let myP = document.createElement("p");
+            title.textContent = products[i].name;
+            myP.textContent = `Price: ${products[i].price}`;
+            let button = document.createElement("button");
+            button.textContent = "Buy Now";
+            myDiv.appendChild(title);
+            myDiv.appendChild(myP);
+            myDiv.appendChild(button);
+            myProducts.appendChild(myDiv);
+            button.addEventListener("click", function () {
+                message.textContent = `You Selected: ${products[i].name}`;
+                let cards = myProducts.querySelectorAll(".card");
+                for (let i = 0; i < cards.length; i++) {
+                    cards[i].classList.remove("selected");
+                }
+                myDiv.classList.add("selected");
+            });
+        }
+    </script>
+</body>
+</html>

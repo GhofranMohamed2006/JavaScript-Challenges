@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Challenge 10</title>
+</head>
+<body>
+    <input id="username" type="text" placeholder="Enter your name" disabled>
+    <script>
+        let input = document.getElementById("username");
+        console.log(input.getAttribute("placeholder"));
+        input.removeAttribute("disabled");
+        input.setAttribute("placeholder", "Enter your username");
+    </script>
+</body>
+</html>

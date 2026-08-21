@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Challenge 13</title>
+</head>
+<body>
+    <h1>My Skills</h1>
+    <div id="skills"></div>
+    <script>
+        let myElement = document.getElementById("skills");
+        let myP1 = document.createElement("p");
+        myP1.textContent = "HTML";
+        let myP2 = document.createElement("p");
+        myP2.textContent = "CSS";
+        let myP3 = document.createElement("p");
+        myP3.textContent = "JavaScript";
+        myElement.appendChild(myP1);
+        myElement.appendChild(myP2);
+        myElement.appendChild(myP3);
+    </script>
+</body>
+</html>

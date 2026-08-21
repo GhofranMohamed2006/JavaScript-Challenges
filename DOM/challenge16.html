@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Challenge 16</title>
+    <style>
+        .card {
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="products"></div>
+    <script>
+        let products = [
+            { name: "Laptop", price: 25000 },
+            { name: "Phone", price: 15000 },
+            { name: "Tablet", price: 8000 }
+        ];
+        let myProducts = document.getElementById("products");
+        for (let i=0; i<products.length; i++) {
+            let myDiv = document.createElement("div");
+            myDiv.classList.add("card");
+            let title = document.createElement("h2");
+            let myP = document.createElement("p");
+            title.textContent = products[i].name;
+            myP.textContent = `Price: ${products[i].price}`;
+            myDiv.appendChild(title);
+            myDiv.appendChild(myP);
+            myProducts.appendChild(myDiv);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Challenge 20</title>
+    <style>
+        .card {
+                padding: 20px;
+                margin: 10px;
+                border: 1px solid black;
+            }
+            .selected {
+                background-color: lightgray;
+            }
+        </style>
+</head>
+<body>
+    <input id="productName" placeholder="Product name">
+    <input id="productPrice" placeholder="Product price">
+    <button id="addBtn">Add Product</button>
+    <div id="products"></div>
+    <div id="message"></div>
+    <script>
+        let products = [
+            { name: "Laptop", price: 25000 },
+            { name: "Phone", price: 15000 }
+        ];
+        let myProducts = document.getElementById("products");
+        let message = document.getElementById("message");
+        let addButton = document.getElementById("addBtn");
+        let inputName = document.getElementById("productName");
+        let inputPrice = document.getElementById("productPrice");
+        function createProductCard(product) {
+            let myDiv = document.createElement("div");
+            myDiv.classList.add("card");
+            let title = document.createElement("h2");
+            let myP = document.createElement("p");
+            title.textContent = product.name;
+            myP.textContent = `Price: ${product.price}`;
+            let button = document.createElement("button");
+            let deleteButton = document.createElement("button");
+            button.textContent = "Buy Now";
+            deleteButton.textContent = "Delete";
+            myDiv.appendChild(title);
+            myDiv.appendChild(myP);
+            myDiv.appendChild(button);
+            myDiv.appendChild(deleteButton);
+            myProducts.appendChild(myDiv);
+            button.addEventListener("click", function () {
+                message.textContent = `You Selected: ${product.name}`;
+                let cards = myProducts.querySelectorAll(".card");
+                for (let i = 0; i < cards.length; i++) {
+                    cards[i].classList.remove("selected");
+                }
+                myDiv.classList.add("selected");
+            });
+            deleteButton.addEventListener("click", function () {
+                myDiv.remove();
+                message.textContent = `Deleted: ${product.name}`;
+            });
+        }
+        for (let i=0; i<products.length; i++) {
+            createProductCard(products[i]);
+        }
+        addButton.addEventListener("click", function () {
+                let newName = inputName.value;
+                let newPrice = inputPrice.value;
+                let newProduct = {
+                    name: newName,
+                    price: newPrice
+                };
+                products.push(newProduct);
+                createProductCard(newProduct);
+            });
+        console.log(products);
+    </script>
+</body>
+</html>

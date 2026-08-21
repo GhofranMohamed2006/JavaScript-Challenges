@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Challenge 3</title>
+</head>
+<body>
+    <h1 class="title">Hello Ghofran</h1>
+    <p class="description">Welcome to JavaScript</p>
+    <button id="btn">Click Me</button>
+    <script>
+        let title = document.querySelector(".title");
+        title.textContent = "DOM is Easy!";
+        let description = document.querySelector(".description");
+        description.textContent = "I Love JavaScript";
+        let btn = document.querySelector("#btn");
+        btn.textContent = "Start Learning";
+        console.log(title);
+        console.log(description);
+        console.log(btn);
+    </script>
+</body>
+</html>

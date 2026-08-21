@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Challenge 7</title>
+    <style>
+        .active {
+            background-color: black;
+            color: white;
+        } 
+    </style>
+</head>
+<body>
+    <button id="btn">Toggle Box</button>
+    <div id="box">Hello</div>
+    <script>
+        let box = document.getElementById("box");
+        let button = document.getElementById("btn");
+        button.addEventListener("click", function () {
+            box.classList.toggle("active");
+            console.log(box.classList);
+        });
+    </script>
+</body>
+</html>

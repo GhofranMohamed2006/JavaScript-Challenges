@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Challenge 14</title>
+</head>
+<body>
+    <h1>My Skills</h1>
+    <div id="skills"></div>
+    <script>
+        let skills = ["HTML", "CSS", "JavaScript", "React", "Node.js"];
+        let mySkills = document.getElementById("skills");
+        for (let i=0; i<skills.length; i++) {
+            let myP = document.createElement("p");
+            myP.textContent = skills[i];
+            mySkills.appendChild(myP);
+        }
+    </script>
+</body>
+</html>

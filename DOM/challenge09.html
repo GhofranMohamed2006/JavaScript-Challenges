@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Challenge 9</title>
+</head>
+<body>
+    <a id="link" href="https://example.com">Visit Website</a>
+    <script>
+        let myLink = document.getElementById("link");
+        console.log(myLink.getAttribute("href"));
+        myLink.setAttribute("href", "https://google.com");
+        myLink.textContent = "Go to Google";
+    </script>
+</body>
+</html>
