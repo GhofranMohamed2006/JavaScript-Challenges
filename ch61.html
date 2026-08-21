@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 61</title>
+</head>
+<body>
+    <script>
+        let students = [
+            { name: "Ghofran", grade: 85 },
+            { name: "Ahmed", grade: 72 },
+            { name: "Mariam", grade: 91 },
+            { name: "Omar", grade: 60 },
+            { name: "Salma", grade: 88 }
+        ];
+        function addStudent(students, name, grade) {
+            let newStudent = {
+                name: name,
+                grade: grade
+            };
+            students.push(newStudent);
+            return newStudent;
+        }
+        let newStudent = addStudent(students, "Khaled", 78);
+        console.log(newStudent);
+        // console.log(students);
+    </script>
+</body>
+</html>

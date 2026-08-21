@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 59</title>
+</head>
+<body>
+    <script>
+        let students = [
+            { name: "Ghofran", grade: 85 },
+            { name: "Ahmed", grade: 72 },
+            { name: "Mariam", grade: 91 },
+            { name: "Omar", grade: 60 },
+            { name: "Salma", grade: 88 }
+        ];
+        function getStudentReport(students, searchName) {
+            let status;
+            for (let i=0; i<students.length; i++) {
+                if (students[i].name === searchName) {
+                    if (students[i].grade >= 60) {
+                        status = "Passed";
+                    } else {
+                        status = "Failed";
+                    }
+                    return {
+                        name: students[i].name,
+                        grade: students[i].grade,
+                        status
+                    };
+                }
+            }
+            return null;
+        }
+        let result = getStudentReport(students, "Mariam");
+        if (result !== null) {
+            console.log(`Name: ${result.name}`);
+            console.log(`Grade: ${result.grade}`);
+            console.log(`Status: ${result.status}`);
+        } else {
+            console.log("Student Not Found");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 56</title>
+</head>
+<body>
+    <script>
+        let students = [
+            { name: "Ghofran", grade: 85 },
+            { name: "Ahmed", grade: 72 },
+            { name: "Mariam", grade: 91 },
+            { name: "Omar", grade: 60 },
+            { name: "Salma", grade: 88 }
+        ];
+        function findStudentByName(students, searchName) {
+            for (let i=0; i<students.length; i++) {
+                if (students[i].name === searchName) {
+                    return students[i];
+                }
+            }
+            return null;
+        }
+        let result = findStudentByName(students, "Mariam");
+        if (result !== null) {
+            console.log(`Name: ${result.name}`);
+            console.log(`Grade: ${result.grade}`);
+        } else {
+            console.log("Student Not Found");
+        }
+    </script>
+</body>
+</html>

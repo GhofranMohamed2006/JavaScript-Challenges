@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 51</title>
+</head>
+<body>
+    <script>
+        let students = [
+            ["Ghofran", 85],
+            ["Ahmed", 72],
+            ["Mariam", 91],
+            ["Omar", 60],
+            ["Salma", 88]
+        ];
+        function getStudent(students, searchName) {
+            for(let i=0; i<students.length; i++) {
+                if (students[i][0] === searchName) {
+                    return {
+                        name: students[i][0],
+                        grade: students[i][1]
+                    };
+                }
+            }
+            return null;
+        }
+        let result = getStudent(students, "Mariam");
+        console.log(result.name);
+        console.log(result.grade);
+    </script>
+</body>
+</html>

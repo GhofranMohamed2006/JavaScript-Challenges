@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 11</title>
+</head>
+<body>
+    <script>
+        var username = "Ghofran";
+        var age = 20;
+        var isStudent = false;
+        var hasCertificate = true;      // if (age >= 18 && (isStudent || hasCertificate)) 
+        if (age >= 18) {
+            if (isStudent || hasCertificate === true) {
+                console.log(`${username} is eligible for the internship.`);
+            }
+            else {
+                console.log(`${username} is not eligible for the internship.`);
+            }
+        } else {
+            console.log(`${username} is not eligible for the internship.`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 58</title>
+</head>
+<body>
+    <script>
+        let students = [
+            { name: "Ghofran", grade: 85 },
+            { name: "Ahmed", grade: 72 },
+            { name: "Mariam", grade: 91 },
+            { name: "Omar", grade: 60 },
+            { name: "Salma", grade: 88 }
+        ];
+        function generateStudentReport(students) {
+            let total = 0;
+            let pass = 0;
+            let fail = 0;
+            let topStudent = students[0];
+            for (let i=0; i<students.length; i++) {
+                total += students[i].grade;
+                if (students[i].grade >= 60) {
+                    pass ++;
+                } else {
+                    fail ++;
+                }
+                if (students[i].grade > topStudent.grade) {
+                    topStudent = students[i];
+                }
+            }
+            return {
+                average: total / students.length,
+                topStudent,
+                passed: pass,
+                failed: fail
+            };
+        }
+        let report = generateStudentReport(students);
+        console.log(`Average: ${report.average}`);
+        console.log(`Top Student: ${report.topStudent.name}`);
+        console.log(`Top Grade: ${report.topStudent.grade}`);
+        console.log(`Passed: ${report.passed}`);
+        console.log(`Failed: ${report.failed}`);
+    </script>
+</body>
+</html>

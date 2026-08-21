@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 44</title>
+</head>
+<body>
+    <script>
+        let students = [
+            ["Ghofran", 85],
+            ["Ahmed", 72],
+            ["Mariam", 91],
+            ["Omar", 60],
+            ["Salma", 88]
+        ];
+        let maxGrade = students[0][1];
+        let topStudent = students[0][0];
+        for (let i=0; i<students.length; i++) {
+            if (students[i][1] > maxGrade) {
+                maxGrade = students[i][1];
+                topStudent = students[i][0];
+            }
+        }
+        console.log(`Top Student: ${topStudent}\nGrade: ${maxGrade}`);
+    </script>
+</body>
+</html>

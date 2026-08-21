@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 45</title>
+</head>
+<body>
+    <script>
+        let students = [
+            ["Ghofran", 85],
+            ["Ahmed", 72],
+            ["Mariam", 91],
+            ["Omar", 60],
+            ["Salma", 88]
+        ];
+        let grades = 0;
+        let topStudent = students[0][0];
+        let maxGrade = students[0][1];
+        let passed = 0;
+        let failed = 0;
+        for (let i=0; i<students.length; i++) {
+            grades += students[i][1];
+            if (students[i][1] > maxGrade) {
+                maxGrade = students[i][1];
+                topStudent = students[i][0];
+            }
+            if (students[i][1] >= 60) {
+                passed ++;
+            } else {
+                failed ++;
+            }
+        }
+        console.log(`Total Students: ${students.length}`);
+        console.log(`Total Grades: ${grades}`);
+        console.log(`Average Grade: ${grades / students.length}`);
+        console.log(`Highest Grade: ${maxGrade}`);
+        console.log(`Top Student: ${topStudent}`);
+        console.log(`Passed Students: ${passed}`);
+        console.log(`Failed Students: ${failed}`);
+    </script>
+</body>
+</html>

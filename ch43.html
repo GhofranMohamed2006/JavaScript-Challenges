@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 43</title>
+</head>
+<body>
+    <script>
+        let students = [
+            ["Ghofran", 85],
+            ["Ahmed", 72],
+            ["Mariam", 91],
+            ["Omar", 60],
+            ["Salma", 88]
+        ];
+        let searchName = "Ahmed";
+        let found = false;
+        let studentName, grade;
+        for (let i=0; i<students.length; i++) {
+            if (students[i][0] === searchName) {
+                studentName = students[i][0];
+                grade = students[i][1];
+                found = true;
+                break;
+            }
+        }
+        if (found) {
+            console.log(`${studentName}'s Grade: ${grade}`);
+        } else {
+            console.log("Student Not Found");
+        }
+    </script>
+</body>
+</html>

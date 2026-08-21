@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 10</title>
+</head>
+<body>
+    <script>
+        var studentName = "Ghofran";
+        var grade = 87;
+        var hasAttendance = true;
+        if (!hasAttendance) {
+            console.log(`${studentName} cannot pass because of attendance.`);
+        }
+        else {
+            if (grade >= 90) {
+                console.log(`${studentName} Got Excellent`);
+            }
+            else if (grade >= 80) {
+                console.log(`${studentName} Got Very Good`);
+            }
+            else if (grade >= 70) {
+                console.log(`${studentName} Got Good`);
+            }
+            else if (grade >= 60) {
+                console.log(`${studentName} Got Pass`);
+            }
+            else {
+                console.log(`${studentName} Failed`);
+            }
+        }
+    </script>
+</body>
+</html>

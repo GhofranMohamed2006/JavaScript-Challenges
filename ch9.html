@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 9</title>
+</head>
+<body>
+    <script>
+        var username = "Ghofran";
+        var password = "12345";
+        var isBlocked = false;
+        if (username === "Ghofran" && password == "12345" && !isBlocked) {
+            console.log(`Welcome ${username}!`);
+        }
+        else if (username !== "Ghofran" || password != "12345") {
+            console.log("Invalid username or password.");
+        }
+        else {
+            console.log("Your account is blocked.");
+        }
+    </script>
+</body>
+</html>
+
+// More Correct
+<!-- if (username !== "Ghofran" || password !== "12345") {
+    console.log("Invalid username or password.");
+}
+else if (isBlocked) {
+    console.log("Your account is blocked.");
+}
+else {
+    console.log(`Welcome ${username}!`);
+} -->

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 17</title>
+</head>
+<body>
+    <script>
+        var email = "  GHofran@GMAIL.com  ";
+        var newEmail = email.trim().toLowerCase();
+        // if (newEmail.includes('@gmail') && newEmail.endsWith(".com")
+        if (newEmail.includes('@') && newEmail.includes("gmail") && newEmail.endsWith(".com")) {
+            console.log("Valid Gmail")
+        } else {
+            console.log("Invalid Email")
+        }
+    </script>
+</body>
+</html>

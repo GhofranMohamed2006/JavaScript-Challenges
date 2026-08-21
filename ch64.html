@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 64</title>
+</head>
+<body>
+    <script>
+        let students = [
+            { name: "Ghofran", grade: 85 },
+            { name: "Ahmed", grade: 72 },
+            { name: "Mariam", grade: 91 },
+            { name: "Omar", grade: 60 },
+            { name: "Salma", grade: 88 }
+        ];
+        function addStudent(students, name, grade) {
+            let newStudent = {
+                name,
+                grade
+            };
+            students.push(newStudent);
+            return newStudent;
+        }
+        function updateStudent(students,searchName, newName, newGrade) {
+            for (let i=0; i<students.length; i++) {
+                if (students[i].name === searchName) {
+                    students[i].name = newName;
+                    students[i].grade = newGrade;
+                    return students[i];
+                }
+            }
+            return null;
+        }
+        function findStudentByName(students, searchName) {
+            for (let i=0; i<students.length; i++) {
+                if (students[i].name === searchName) {
+                    return students[i];
+                }
+            }
+            return null;
+        }
+        function deleteStudent(students, searchName) {
+            for (let i=0; i<students.length; i++) {
+                if (students[i].name === searchName) {
+                    let deletedStudent = students[i];
+                    students.splice(i, 1);
+                    return deletedStudent;
+                }
+            }
+            return null;
+        }
+        console.log(addStudent(students, "Khaled", 78));
+        console.log(updateStudent(students, "Ahmed", "Ahmed Mohamed", 95));
+        let result = findStudentByName(students, "Mariam");
+        if (result !== null) {
+            console.log(`Found: ${result.name} - ${result.grade}`);
+        } else {
+            console.log("Student Not Found");
+        }
+        console.log(deleteStudent(students, "Omar"));
+        console.log(students);
+    </script>
+</body>
+</html>

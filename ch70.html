@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 69</title>
+</head>
+<body>
+    <script>
+        let students = [
+            { name: "Ghofran", grade: 85 },
+            { name: "Ahmed", grade: 72 },
+            { name: "Mariam", grade: 91 },
+            { name: "Omar", grade: 55 },
+            { name: "Salma", grade: 88 }
+        ];
+        function getStudentsAboveGrade(students, minimumGrade) {
+            let studentsAboveGrade = [];
+            for (let i=0; i<students.length; i++) {
+                if (students[i].grade > minimumGrade) {
+                    studentsAboveGrade.push(students[i]);
+                }
+            }
+            return studentsAboveGrade;
+        }
+        let result = getStudentsAboveGrade(students, 80);
+        console.log(result);
+    </script>
+</body>
+</html>

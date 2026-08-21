@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 66</title>
+</head>
+<body>
+    <script>
+        let students = [
+            { name: "Ghofran", grade: 85 },
+            { name: "Ahmed", grade: 72 },
+            { name: "Mariam", grade: 91 },
+            { name: "Omar", grade: 60 },
+            { name: "Salma", grade: 88 }
+        ];
+        function addStudent(students, name, grade) {
+            if (grade < 0 || grade > 100) {
+                return "Invalid Grade";
+            }
+            for (let i=0; i<students.length; i++) {
+                if (students[i].name === name) {
+                    return "Student Already Exists";
+                }
+            }
+            let newStudent = {
+                name,
+                grade
+            };
+            students.push(newStudent);
+            return newStudent;
+        }
+        console.log(addStudent(students, "Ali", 105));
+        console.log(addStudent(students, "Sara", -10));
+    </script>
+</body>
+</html>

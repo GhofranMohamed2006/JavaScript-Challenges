@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 63</title>
+</head>
+<body>
+    <script>
+        let students = [
+            { name: "Ghofran", grade: 85 },
+            { name: "Ahmed", grade: 72 },
+            { name: "Mariam", grade: 91 },
+            { name: "Omar", grade: 60 },
+            { name: "Salma", grade: 88 }
+        ];
+        function updateStudent(students, searchName, newName, newGrade) {
+            for (let i=0; i<students.length; i++) {
+                if (students[i].name === searchName) {
+                    students[i].name = newName;
+                    students[i].grade = newGrade;
+                    return students[i];
+                }
+            }
+            return null;
+        }
+        let result = updateStudent(students, "Ahmed", "Ahmed Mohamed", 95);
+        console.log(result);
+        // console.log(students);
+    </script>
+</body>
+</html>
