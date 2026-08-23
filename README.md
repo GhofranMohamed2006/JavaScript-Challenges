@@ -1,6 +1,6 @@
 # JavaScript Challenges
 
-A collection of JavaScript practice challenges designed to strengthen my understanding of JavaScript fundamentals.
+A collection of JavaScript practice challenges and projects designed to strengthen my understanding of JavaScript fundamentals and improve my problem-solving skills.
 
 ## Topics Covered
 
@@ -14,6 +14,12 @@ A collection of JavaScript practice challenges designed to strengthen my underst
 - Functions
 - CRUD Operations
 - Data Validation
+- DOM Manipulation
+
+## Projects
+- JavaScript Fundamentals Challenges
+- CRUD Operations
+- DOM Manipulation Project
 
 ## Progress
 
@@ -21,4 +27,4 @@ A collection of JavaScript practice challenges designed to strengthen my underst
 - ✅ Arrays & Objects
 - ✅ Functions
 - ✅ CRUD
-- 🔄 DOM Manipulation
+- ✅ DOM Manipulation
