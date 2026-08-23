@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="dashboard" class="dashboard">
+        <div id="sidebar" class="sidebar">
+            <h2>Student Dashboard</h2>
+            <button id="dashboardButton" class="sidebar-btn active">Dashboard</button>
+            <button id="studentsButton" class="sidebar-btn">All Student</button>
+            <button id="AddStudentButton" class="sidebar-btn">Add Student</button>
+            <button id="statisticsButton" class="sidebar-btn">Statictics</button>
+            <div class="bottom">
+                <button>Settings</button>
+                <button>Log out</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="header">
+                <div class="btn">
+                    <button id="toggleBtn">☰</button>
+                </div>
+                <div class="title">
+                    <h2>Student Management Dashboard</h2>
+                </div>
+                <div class="search">
+                    <input id="searchInput" type="search" placeholder="Search Anything..."/>
+                </div>
+            </div>
+            <div id="statisticsSection" class="section1 page-section active">
+                <div class="card">
+                    <h2>Total Students</h2>
+                    <p id="total">0</p>
+                </div>
+                <div class="card">
+                    <h2>Average Grade</h2>
+                    <p id="average">0</p>
+                </div>
+                <div class="card">
+                    <h2>Passed</h2>
+                    <p id="pass">0</p>
+                </div>
+                <div class="card">
+                    <h2>Top Student</h2>
+                    <p id="top">-</p>
+                </div>
+            </div>
+            <div id="studentsSection" class="section2 page-section active">
+                <div id="stInfo" class="stInfo">
+                    <div id="cardsWrapper" class="cards-wrapper"></div>
+                    <div class="pagination">
+                        <button class="page-btn" id="prevBtn">❮</button>
+                        <span id="pageIndicator">Page 1 of 1</span>
+                        <button class="page-btn" id="nextBtn">❯</button>
+                    </div>
+                </div>
+                <div id="addStudentSection" class="editInfo page-section active">
+                    <h3 id="formTitle">Add / Edit Student</h3>
+                    <label><h3>Name</h3></label>
+                    <input id="studentName" type="text" placeholder="Enter Student Name"/>
+                    <label><h3>Grade</h3></label>
+                    <input id="studentGrade" type="number" placeholder="Enter Grade (0-100)"/>
+                    <button id="saveBtn">Add Student</button>
+                    <button id="clearBtn">Clear</button>
+                </div>
+            </div>
+            <div class="footer">
+                © 2026 Student Dashoard. All rights reserved.
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

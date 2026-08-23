@@ -1,0 +1,280 @@
+body {
+    background-color: #13191F;
+    color: #FFFBF4;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+    transition: grid-template-columns 0.3s ease;
+}
+
+.dashboard.sidebar-collapsed {
+    grid-template-columns: 0px 1fr;
+}
+
+.dashboard.sidebar-collapsed .sidebar {
+    border: none;
+    padding: 0;
+    width: 0;
+    opacity: 0;
+}
+
+.sidebar {
+    grid-column: 1 / 2;
+    border: 2px solid #565449;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    transition: all 0.3s ease;
+    padding: 10px;
+}
+
+.sidebar .bottom {
+    margin-top: auto; 
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar button {
+    padding: 10px;
+    font-weight: bold;
+    background-color: #13191F;
+    color: #D8CFBC;
+    border: none;
+    margin: 5px 0;
+    cursor: pointer;
+    width: 100%;
+}
+
+.sidebar button:hover,
+.sidebar button.active {
+    background-color: #D8CFBC;
+    color: #13191F;
+}
+
+.page-section {
+    display: none !important;
+}
+
+.page-section.active {
+    display: flex !important;
+}
+
+.section2.page-section.active {
+    display: grid !important;
+}
+
+.container {
+    grid-column: 2 / 3;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #565449;
+}
+
+.header button {
+    color: #13191F;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #565449;
+    border: none;
+    cursor: pointer;
+    padding: 5px 12px;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+    margin-right: 10px;
+}
+
+.header input {
+    background-color: #565449;
+    border: none;
+    cursor: pointer;
+    padding: 8px 15px;
+    color: #FFFBF4;
+    border-radius: 4px;
+}
+
+.header input::placeholder {
+    color: #D8CFBC;
+}
+
+.header input:hover,
+.header button:hover {
+    transform: scale(1.05);
+}
+
+/* Section 1: Cards */
+.section1 {
+    display: flex; 
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.card {
+    border: 2px solid #565449;
+    padding: 15px;
+    flex: 1;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    background-color: #565449;
+    color: #13191F;
+    transform: translateY(-5px);
+    border: 2px solid #FFFBF4;
+}
+
+.card p {
+    font-size: 32px;
+    margin: 10px 0 0 0;
+    color: #D8CFBC;
+}
+
+/* Section 2: Students & Form */
+.section2 {
+    display: grid;
+    grid-template-columns: 60% 35%;
+    border: 2px solid #565449;
+    padding: 15px;
+    gap: 5%;
+}
+
+.stInfo {
+    background-color: #565449;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.card2 {
+    border: 2px solid #13191F;
+    padding: 15px;
+    background-color: #13191F;
+    width: 25%;
+    text-align: center;
+}
+
+.card2 button {
+    padding: 5px 10px;
+    font-weight: bold;
+    background-color: #565449;
+    color: #FFFBF4;
+    border: none;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.card2 button:hover {
+    background-color: #D8CFBC;
+    color: #13191F;
+}
+
+/* Pagination Style */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.pagination span {
+    color: #FFFBF4;
+    font-weight: bold;
+}
+
+.page-btn {
+    background-color: #13191F;
+    color: #D8CFBC;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.page-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Form Styling */
+.editInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+    align-items: center;
+    border: 1px solid #565449;
+    gap: 10px;
+}
+
+.editInfo input {
+    background-color: #565449;
+    border: none;
+    padding: 8px;
+    color: #FFFBF4;
+    width: 80%;
+}
+
+.editInfo button {
+    background-color: #565449;
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFBF4;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.editInfo button:hover {
+    background-color: #D8CFBC;
+    color: #13191F;
+}
+
+.footer {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .section2,
+    .section2.page-section.active {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px;
+    }
+
+    .stInfo,
+    .editInfo {
+        width: 100% !important;
+    }
+}
